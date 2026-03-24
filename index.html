@@ -106,7 +106,7 @@
         <div class="about-text reveal">
           <h2 class="section-heading">Who I am.</h2>
           <p>I'm a full stack developer who works across the entire web stack. Frontend, backend, deployment — I handle it end-to-end without needing to hand anything off.</p>
-          <p>My client-side stack is HTML, CSS, and JavaScript. On the server I work with Python Flask and Node.js. I've shipped real projects — not just tutorials — including a Discord-integrated tournament platform and an IoT dashboard.</p>
+          <p>My client-side stack is HTML, CSS, and JavaScript. On the server I work with Python Flask and Node.js. I've built real projects — not just tutorials — including a Discord-integrated tournament platform and a freelance hiring platform.</p>
           <p>I write code that works, looks right, and doesn't break when real users touch it. Looking for a role where I can contribute from day one.</p>
         </div>
 
@@ -219,52 +219,47 @@
         <span class="sl-line"></span>
         <span class="sl-text">// 03 — projects</span>
       </div>
-      <h2 class="section-heading reveal">Things I've shipped.</h2>
+      <h2 class="section-heading reveal">Things I've made.</h2>
 
-      <div class="projects-grid">
+      <div class="projects-grid two-col">
 
-        <article class="proj-card reveal">
-          <div class="proj-header">
-            <span class="proj-num">_01</span>
-            <div class="proj-badges">
-              <span>Python</span><span>Flask</span><span>Discord API</span><span>Netlify</span>
-            </div>
+        <article class="proj-card reveal" onclick="window.open('https://sovereignskingdom.xyz/', '_blank')">
+          <div class="proj-thumb">
+            <img src="sk.png" alt="Sovereigns Kingdom preview" onerror="this.parentElement.classList.add('no-img')" />
           </div>
-          <h3 class="proj-name">Sovereigns Kingdom</h3>
-          <p class="proj-desc">Discord-integrated tournament management platform. Python Flask backend, discord.py bot, Netlify-hosted frontend with serverless proxy functions and Discord OAuth admin gating.</p>
-          <div class="proj-footer">
-            <span class="proj-kind">full stack</span>
-            <span class="proj-arrow">&nearr;</span>
+          <div class="proj-content">
+            <div class="proj-header">
+              <span class="proj-num">_01</span>
+              <div class="proj-badges">
+                <span>Python</span><span>Flask</span><span>Discord API</span><span>Netlify</span>
+              </div>
+            </div>
+            <h3 class="proj-name">Sovereigns Kingdom</h3>
+            <p class="proj-desc">Discord-integrated tournament management platform. Python Flask backend, discord.py bot, Netlify-hosted frontend with serverless proxy functions and Discord OAuth admin gating.</p>
+            <div class="proj-footer">
+              <span class="proj-kind">full stack</span>
+              <span class="proj-arrow">&nearr;</span>
+            </div>
           </div>
         </article>
 
-        <article class="proj-card reveal">
-          <div class="proj-header">
-            <span class="proj-num">_02</span>
-            <div class="proj-badges">
-              <span>OAuth</span><span>Netlify</span><span>Serverless</span><span>JS</span>
+        <article class="proj-card reveal" onclick="window.open('https://app-nexvia.netlify.app/', '_blank')">
+          <div class="proj-thumb">
+            <img src="nexvia.png" alt="Nexvia preview" onerror="this.parentElement.classList.add('no-img')" />
+          </div>
+          <div class="proj-content">
+            <div class="proj-header">
+              <span class="proj-num">_02</span>
+              <div class="proj-badges">
+                <span>Node.js</span><span>JS</span><span>Netlify</span><span>REST</span>
+              </div>
             </div>
-          </div>
-          <h3 class="proj-name">Admin Dashboard Panel</h3>
-          <p class="proj-desc">Standalone admin panel on a separate Netlify subdomain. Discord OAuth, role-based access gating, and CORS managed cleanly through Netlify serverless proxy functions.</p>
-          <div class="proj-footer">
-            <span class="proj-kind">frontend + backend</span>
-            <span class="proj-arrow">&nearr;</span>
-          </div>
-        </article>
-
-        <article class="proj-card reveal">
-          <div class="proj-header">
-            <span class="proj-num">_03</span>
-            <div class="proj-badges">
-              <span>IoT</span><span>ESP8266</span><span>Hardware</span><span>Web</span>
+            <h3 class="proj-name">Nexvia</h3>
+            <p class="proj-desc">Freelance hiring platform — hire me directly and raise a ticket for your project. Choose from plans: Full Stack Website, Full App, E-Commerce, or build a Custom package with your own budget.</p>
+            <div class="proj-footer">
+              <span class="proj-kind">frontend + backend</span>
+              <span class="proj-arrow">&nearr;</span>
             </div>
-          </div>
-          <h3 class="proj-name">IoT Intruder Alert</h3>
-          <p class="proj-desc">NodeMCU ESP8266 with ultrasonic sensor, OLED display, LEDs and buzzer paired with a WiFi-hosted web dashboard for live sensor data and manual hardware controls.</p>
-          <div class="proj-footer">
-            <span class="proj-kind">hardware + software</span>
-            <span class="proj-arrow">&nearr;</span>
           </div>
         </article>
 
