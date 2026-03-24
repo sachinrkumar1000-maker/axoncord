@@ -4,121 +4,127 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sachin — Full Stack Developer</title>
+  <meta name="description" content="Full Stack Developer — HTML, CSS, JS, Python, Flask, Node.js" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NAV -->
   <nav id="nav">
-    <a href="#" class="nav-logo">Sachin</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-    </button>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-bracket">[</span>SACHIN<span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about"><span class="link-num">01.</span>about</a></li>
+        <li><a href="#skills"><span class="link-num">02.</span>skills</a></li>
+        <li><a href="#projects"><span class="link-num">03.</span>projects</a></li>
+        <li><a href="#contact"><span class="link-num">04.</span>contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <div class="mobile-nav" id="mobileNav">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#about"><span>01.</span> about</a>
+    <a href="#skills"><span>02.</span> skills</a>
+    <a href="#projects"><span>03.</span> projects</a>
+    <a href="#contact"><span>04.</span> contact</a>
   </div>
 
   <!-- HERO -->
   <section class="hero" id="home">
+    <div class="hero-bg-text" aria-hidden="true">DEV</div>
+
     <div class="hero-inner">
       <div class="hero-left">
-        <p class="hero-label reveal">Full Stack Developer</p>
-        <h1 class="hero-name reveal">
-          <span class="line">Sachin.</span>
-        </h1>
-        <p class="hero-desc reveal">
-          I build things for the web — fast frontends,
-          clean backends, and everything between.
-          End-to-end, always.
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <span class="t-dot r"></span>
+            <span class="t-dot y"></span>
+            <span class="t-dot g"></span>
+            <span class="t-title">sachin@dev:~$</span>
+          </div>
+          <div class="terminal-body">
+            <div class="t-line"><span class="t-prompt">$</span> whoami</div>
+            <div class="t-output">full_stack_developer</div>
+            <div class="t-line"><span class="t-prompt">$</span> cat skills.txt</div>
+            <div class="t-output">HTML &bull; CSS &bull; JavaScript<br />Python &bull; Flask &bull; Node.js<br />REST APIs &bull; Git &bull; Netlify</div>
+            <div class="t-line"><span class="t-prompt">$</span> echo $STATUS</div>
+            <div class="t-output available">open_to_work &#x2713;</div>
+            <div class="t-line live"><span class="t-prompt">$</span> <span id="liveCmd"></span><span class="blink-cursor">_</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <p class="hero-eyebrow">// full stack developer</p>
+        <h1 class="hero-name">Sachin.</h1>
+        <p class="hero-tagline">
+          Frontend. Backend.<br />End-to-end.
         </p>
-        <div class="hero-actions reveal">
-          <a href="#projects" class="btn-dark">See my work &rarr;</a>
-          <a href="#contact" class="btn-ghost">Get in touch</a>
+        <div class="hero-ctas">
+          <a href="#projects" class="cta-primary">&gt; view_projects()</a>
+          <a href="#contact" class="cta-ghost">get_in_touch()</a>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-num">3+</span>
+            <span class="meta-label">yrs experience</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-num">10+</span>
+            <span class="meta-label">projects shipped</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-num">2</span>
+            <span class="meta-label">backend stacks</span>
+          </div>
         </div>
       </div>
-      <div class="hero-right reveal">
-        <div class="hero-card">
-          <div class="hero-card-row">
-            <span class="card-key">Status</span>
-            <span class="card-val available">
-              <span class="dot-live"></span>Open to work
-            </span>
-          </div>
-          <div class="hero-card-row">
-            <span class="card-key">Specialty</span>
-            <span class="card-val">Frontend &amp; Backend</span>
-          </div>
-          <div class="hero-card-row">
-            <span class="card-key">Languages</span>
-            <span class="card-val">JS / Python / HTML+CSS</span>
-          </div>
-          <div class="hero-card-row">
-            <span class="card-key">Frameworks</span>
-            <span class="card-val">Flask / Node.js</span>
-          </div>
-          <div class="hero-card-row">
-            <span class="card-key">Type</span>
-            <span class="card-val">Full Stack</span>
-          </div>
-        </div>
-        <div class="hero-corner-mark">&lsquo;26</div>
-      </div>
-    </div>
-    <div class="hero-divider">
-      <span>&#47;&#47; scroll to explore</span>
-      <div class="divider-line"></div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-index">01</p>
-        <h2 class="section-title">About</h2>
+      <div class="section-label reveal">
+        <span class="sl-line"></span>
+        <span class="sl-text">// 01 — about</span>
       </div>
-      <div class="about-grid">
+
+      <div class="about-layout">
         <div class="about-text reveal">
-          <p>
-            I'm a developer who enjoys working across the full stack — from writing
-            semantic HTML and crafting CSS layouts to building REST APIs and handling
-            server logic in Python or Node.
-          </p>
-          <p>
-            I don't specialize in just one layer. I know what a good user interface
-            needs, and I know what a reliable backend looks like. That combination
-            lets me ship complete products without handing things off halfway.
-          </p>
-          <p>
-            Right now I'm looking for a role where I can contribute meaningfully from
-            day one and keep growing. I work well independently and I pick things up fast.
-          </p>
+          <h2 class="section-heading">Who I am.</h2>
+          <p>I'm a full stack developer who works across the entire web stack. Frontend, backend, deployment — I handle it end-to-end without needing to hand anything off.</p>
+          <p>My client-side stack is HTML, CSS, and JavaScript. On the server I work with Python Flask and Node.js. I've shipped real projects — not just tutorials — including a Discord-integrated tournament platform and an IoT dashboard.</p>
+          <p>I write code that works, looks right, and doesn't break when real users touch it. Looking for a role where I can contribute from day one.</p>
         </div>
-        <div class="about-facts reveal">
-          <div class="fact-row">
-            <span class="fact-num">3+</span>
-            <span class="fact-label">years building for the web</span>
-          </div>
-          <div class="fact-row">
-            <span class="fact-num">10+</span>
-            <span class="fact-label">projects shipped</span>
-          </div>
-          <div class="fact-row">
-            <span class="fact-num">2</span>
-            <span class="fact-label">stacks mastered (and counting)</span>
+
+        <div class="about-code reveal">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-filename">developer.js</span>
+            </div>
+            <div class="code-body">
+              <div class="code-line"><span class="c-kw">const</span> <span class="c-var">sachin</span> <span class="c-op">=</span> <span class="c-bracket">{</span></div>
+              <div class="code-line indent"><span class="c-key">name</span><span class="c-op">:</span> <span class="c-str">"Sachin"</span><span class="c-op">,</span></div>
+              <div class="code-line indent"><span class="c-key">role</span><span class="c-op">:</span> <span class="c-str">"Full Stack Dev"</span><span class="c-op">,</span></div>
+              <div class="code-line indent"><span class="c-key">frontend</span><span class="c-op">:</span> <span class="c-bracket">[</span><span class="c-str">"HTML"</span><span class="c-op">,</span> <span class="c-str">"CSS"</span><span class="c-op">,</span> <span class="c-str">"JS"</span><span class="c-bracket">]</span><span class="c-op">,</span></div>
+              <div class="code-line indent"><span class="c-key">backend</span><span class="c-op">:</span> <span class="c-bracket">[</span><span class="c-str">"Flask"</span><span class="c-op">,</span> <span class="c-str">"Node.js"</span><span class="c-bracket">]</span><span class="c-op">,</span></div>
+              <div class="code-line indent"><span class="c-key">openToWork</span><span class="c-op">:</span> <span class="c-bool">true</span><span class="c-op">,</span></div>
+              <div class="code-line indent"><span class="c-key">hire</span><span class="c-op">:</span> <span class="c-fn">() =&gt;</span> <span class="c-str">"yes please"</span></div>
+              <div class="code-line"><span class="c-bracket">}</span><span class="c-op">;</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -128,74 +134,79 @@
   <!-- SKILLS -->
   <section class="skills" id="skills">
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-index">02</p>
-        <h2 class="section-title">Skills</h2>
+      <div class="section-label reveal">
+        <span class="sl-line"></span>
+        <span class="sl-text">// 02 — skills</span>
       </div>
+      <h2 class="section-heading reveal">What I build with.</h2>
+
       <div class="skills-grid">
-
-        <div class="skill-block reveal">
-          <div class="skill-block-header">
-            <span class="skill-symbol">&#9633;</span>
-            <h3>Frontend</h3>
+        <div class="skill-card reveal">
+          <div class="skill-top">
+            <span class="skill-idx">[ 01 ]</span>
+            <span class="skill-badge frontend">frontend</span>
           </div>
-          <p>Responsive layouts, clean component structure, and interfaces that work on every screen size without relying on a framework.</p>
-          <ul class="tag-list">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>Responsive Design</li>
-            <li>DOM Manipulation</li>
+          <h3>Interface<br/>Development</h3>
+          <p>Responsive layouts and clean markup that work on every screen. No framework required.</p>
+          <ul class="stag-list">
+            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>DOM</li><li>Responsive</li>
           </ul>
         </div>
 
-        <div class="skill-block reveal">
-          <div class="skill-block-header">
-            <span class="skill-symbol">&#9651;</span>
-            <h3>Backend</h3>
+        <div class="skill-card reveal">
+          <div class="skill-top">
+            <span class="skill-idx">[ 02 ]</span>
+            <span class="skill-badge backend">backend</span>
           </div>
-          <p>Server logic, REST API design, database integration, and authentication — built with Python Flask or Node.js depending on the job.</p>
-          <ul class="tag-list">
-            <li>Python</li>
-            <li>Flask</li>
-            <li>Node.js</li>
-            <li>REST APIs</li>
-            <li>Auth &amp; OAuth</li>
+          <h3>Server &amp;<br/>API Design</h3>
+          <p>REST APIs, auth flows, database integration and server logic — Flask or Node depending on the job.</p>
+          <ul class="stag-list">
+            <li>Python</li><li>Flask</li><li>Node.js</li><li>REST</li><li>OAuth</li>
           </ul>
         </div>
 
-        <div class="skill-block reveal">
-          <div class="skill-block-header">
-            <span class="skill-symbol">&#9675;</span>
-            <h3>Full Stack</h3>
+        <div class="skill-card reveal">
+          <div class="skill-top">
+            <span class="skill-idx">[ 03 ]</span>
+            <span class="skill-badge fullstack">fullstack</span>
           </div>
-          <p>Connecting frontend and backend end-to-end. Serverless functions, deployment pipelines, and making every layer talk to each other correctly.</p>
-          <ul class="tag-list">
-            <li>Netlify</li>
-            <li>Serverless Functions</li>
-            <li>Discord API</li>
-            <li>Git</li>
-            <li>Deployment</li>
+          <h3>End-to-End<br/>Delivery</h3>
+          <p>Deployment pipelines, serverless functions, bot integrations — I connect every layer and ship it live.</p>
+          <ul class="stag-list">
+            <li>Git</li><li>Netlify</li><li>Serverless</li><li>Discord API</li><li>SQL</li>
           </ul>
         </div>
-
       </div>
 
-      <div class="stack-row reveal">
-        <p class="stack-label">&#47;&#47; full tech stack</p>
-        <div class="stack-items">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Python</span>
-          <span>Flask</span>
-          <span>Node.js</span>
-          <span>npm</span>
-          <span>Git</span>
-          <span>SQL</span>
-          <span>Netlify</span>
-          <span>Discord API</span>
-          <span>REST</span>
+      <div class="marquee-wrap reveal">
+        <span class="marquee-label">// stack</span>
+        <div class="marquee-track">
+          <div class="marquee-inner" aria-hidden="true">
+            <span>HTML</span><span class="msep">/</span>
+            <span>CSS</span><span class="msep">/</span>
+            <span>JavaScript</span><span class="msep">/</span>
+            <span>Python</span><span class="msep">/</span>
+            <span>Flask</span><span class="msep">/</span>
+            <span>Node.js</span><span class="msep">/</span>
+            <span>npm</span><span class="msep">/</span>
+            <span>Git</span><span class="msep">/</span>
+            <span>SQL</span><span class="msep">/</span>
+            <span>Netlify</span><span class="msep">/</span>
+            <span>Discord API</span><span class="msep">/</span>
+            <span>REST</span><span class="msep">/</span>
+            <span>HTML</span><span class="msep">/</span>
+            <span>CSS</span><span class="msep">/</span>
+            <span>JavaScript</span><span class="msep">/</span>
+            <span>Python</span><span class="msep">/</span>
+            <span>Flask</span><span class="msep">/</span>
+            <span>Node.js</span><span class="msep">/</span>
+            <span>npm</span><span class="msep">/</span>
+            <span>Git</span><span class="msep">/</span>
+            <span>SQL</span><span class="msep">/</span>
+            <span>Netlify</span><span class="msep">/</span>
+            <span>Discord API</span><span class="msep">/</span>
+            <span>REST</span><span class="msep">/</span>
+          </div>
         </div>
       </div>
     </div>
@@ -204,74 +215,57 @@
   <!-- PROJECTS -->
   <section class="projects" id="projects">
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-index">03</p>
-        <h2 class="section-title">Projects</h2>
+      <div class="section-label reveal">
+        <span class="sl-line"></span>
+        <span class="sl-text">// 03 — projects</span>
       </div>
+      <h2 class="section-heading reveal">Things I've shipped.</h2>
 
-      <div class="projects-list">
+      <div class="projects-grid">
 
-        <article class="project-item reveal">
-          <div class="project-meta">
-            <span class="project-num">01</span>
-            <div class="project-tags-inline">
-              <span>Python</span>
-              <span>Flask</span>
-              <span>Discord API</span>
-              <span>Netlify</span>
+        <article class="proj-card reveal">
+          <div class="proj-header">
+            <span class="proj-num">_01</span>
+            <div class="proj-badges">
+              <span>Python</span><span>Flask</span><span>Discord API</span><span>Netlify</span>
             </div>
           </div>
-          <div class="project-body">
-            <h3>Sovereigns Kingdom</h3>
-            <p>
-              A Discord-integrated tournament management platform. Full stack —
-              Python Flask backend, discord.py bot, and a Netlify-deployed frontend
-              with serverless proxy functions and Discord OAuth for admin access control.
-            </p>
+          <h3 class="proj-name">Sovereigns Kingdom</h3>
+          <p class="proj-desc">Discord-integrated tournament management platform. Python Flask backend, discord.py bot, Netlify-hosted frontend with serverless proxy functions and Discord OAuth admin gating.</p>
+          <div class="proj-footer">
+            <span class="proj-kind">full stack</span>
+            <span class="proj-arrow">&nearr;</span>
           </div>
-          <div class="project-arrow">&#8599;</div>
         </article>
 
-        <article class="project-item reveal">
-          <div class="project-meta">
-            <span class="project-num">02</span>
-            <div class="project-tags-inline">
-              <span>OAuth</span>
-              <span>Netlify</span>
-              <span>Serverless</span>
-              <span>JS</span>
+        <article class="proj-card reveal">
+          <div class="proj-header">
+            <span class="proj-num">_02</span>
+            <div class="proj-badges">
+              <span>OAuth</span><span>Netlify</span><span>Serverless</span><span>JS</span>
             </div>
           </div>
-          <div class="project-body">
-            <h3>Admin Dashboard Panel</h3>
-            <p>
-              Standalone admin panel on a separate subdomain with Discord OAuth login,
-              role-based access gating, and CORS handled cleanly through Netlify serverless
-              functions acting as a proxy layer.
-            </p>
+          <h3 class="proj-name">Admin Dashboard Panel</h3>
+          <p class="proj-desc">Standalone admin panel on a separate Netlify subdomain. Discord OAuth, role-based access gating, and CORS managed cleanly through Netlify serverless proxy functions.</p>
+          <div class="proj-footer">
+            <span class="proj-kind">frontend + backend</span>
+            <span class="proj-arrow">&nearr;</span>
           </div>
-          <div class="project-arrow">&#8599;</div>
         </article>
 
-        <article class="project-item reveal">
-          <div class="project-meta">
-            <span class="project-num">03</span>
-            <div class="project-tags-inline">
-              <span>IoT</span>
-              <span>ESP8266</span>
-              <span>Hardware</span>
-              <span>Web Dashboard</span>
+        <article class="proj-card reveal">
+          <div class="proj-header">
+            <span class="proj-num">_03</span>
+            <div class="proj-badges">
+              <span>IoT</span><span>ESP8266</span><span>Hardware</span><span>Web</span>
             </div>
           </div>
-          <div class="project-body">
-            <h3>IoT Intruder Alert System</h3>
-            <p>
-              Hardware and software built together — NodeMCU ESP8266, ultrasonic sensor,
-              OLED display, LEDs, and a buzzer, all paired with a WiFi-hosted web dashboard
-              showing live sensor readings and manual control buttons.
-            </p>
+          <h3 class="proj-name">IoT Intruder Alert</h3>
+          <p class="proj-desc">NodeMCU ESP8266 with ultrasonic sensor, OLED display, LEDs and buzzer paired with a WiFi-hosted web dashboard for live sensor data and manual hardware controls.</p>
+          <div class="proj-footer">
+            <span class="proj-kind">hardware + software</span>
+            <span class="proj-arrow">&nearr;</span>
           </div>
-          <div class="project-arrow">&#8599;</div>
         </article>
 
       </div>
@@ -281,37 +275,30 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
-      <div class="section-header reveal">
-        <p class="section-index">04</p>
-        <h2 class="section-title">Contact</h2>
+      <div class="section-label reveal">
+        <span class="sl-line"></span>
+        <span class="sl-text">// 04 — contact</span>
       </div>
-      <div class="contact-grid">
+      <div class="contact-layout">
         <div class="contact-left reveal">
-          <p class="contact-heading">
-            Open to new opportunities.<br />
-            Let's talk.
-          </p>
-          <p class="contact-sub">
-            If you have a role, project, or just want to have a conversation
-            about what I can bring — reach out on any of the channels below.
-            I respond fast.
-          </p>
+          <h2 class="contact-heading">Let's build<br/>something.</h2>
+          <p class="contact-sub">Open to full-time, contracts, and collabs. Pick a channel — I respond fast.</p>
         </div>
         <div class="contact-right reveal">
-          <a href="https://discord.com/users/929935766577119243" target="_blank" class="contact-link">
-            <span class="contact-link-label">Discord</span>
-            <span class="contact-link-val">ninja.ly</span>
-            <span class="contact-link-arrow">&#8599;</span>
+          <a href="mailto:sachinrkumar1000@gmail.com" class="contact-row">
+            <span class="cr-label">// email</span>
+            <span class="cr-val">sachinrkumar1000@gmail.com</span>
+            <span class="cr-arrow">&nearr;</span>
           </a>
-          <a href="https://github.com/" target="_blank" class="contact-link">
-            <span class="contact-link-label">GitHub</span>
-            <span class="contact-link-val">View repositories</span>
-            <span class="contact-link-arrow">&#8599;</span>
+          <a href="https://github.com/sachinrkumar1000-maker" target="_blank" rel="noopener" class="contact-row">
+            <span class="cr-label">// github</span>
+            <span class="cr-val">sachinrkumar1000-maker</span>
+            <span class="cr-arrow">&nearr;</span>
           </a>
-          <a href="mailto:your@email.com" class="contact-link">
-            <span class="contact-link-label">Email</span>
-            <span class="contact-link-val">your@email.com</span>
-            <span class="contact-link-arrow">&#8599;</span>
+          <a href="https://discord.com/users/929935766577119243" target="_blank" rel="noopener" class="contact-row">
+            <span class="cr-label">// discord</span>
+            <span class="cr-val">ninja.ly</span>
+            <span class="cr-arrow">&nearr;</span>
           </a>
         </div>
       </div>
@@ -320,8 +307,8 @@
 
   <footer>
     <div class="container footer-inner">
-      <p class="footer-copy">Sachin &mdash; Full Stack Developer &mdash; 2025</p>
-      <a href="#home" class="footer-back">Back to top &uarr;</a>
+      <span class="footer-left">Sachin &mdash; built with HTML, CSS &amp; JS &mdash; 2025</span>
+      <a href="#home" class="footer-top">^ top</a>
     </div>
   </footer>
 
